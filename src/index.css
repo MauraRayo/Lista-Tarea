@@ -5,9 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #95B8F6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.tarea{
+  background-color: #ADD5FA;
+    width: 60%;
+    /* text-align: left; */
+    margin-left: 25%;
+    color: darkslateblue;
+  
+}
+
+#nuevaTarea{
+  width: 30%;
+  height: 80px
+}
+.btn{
+  margin-left: 1%;
+  width: 7%;
+  height: 36px;
+}
+li{
+  list-style: none;
 }

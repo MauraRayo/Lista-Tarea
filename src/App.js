@@ -25,7 +25,7 @@ function eliminarTarea(tarea){
 }
 
 function modificartarea(tarea){
-  let editada = prompt("Cachauuu");
+  let editada = prompt("Modificar Tarea");
   let index=tareas.indexOf(tarea);
   tareas.splice(index,1,editada);
   actualizarTareas([...tareas]);
@@ -33,18 +33,17 @@ function modificartarea(tarea){
 }
   return (
     <div className="App">
-      <h1>Lista de tareas Ejemplo React</h1>
-      <p>Has añadido {contador} tareas en total....Ánimo!</p>
+      <h1>Lista de tareas</h1>
+      <p>Has añadido {contador} tareas en total!</p>
       <p>Has añadido hoy {contador} tareas</p>
       <input type="text" id='nuevaTarea'></input>
-      <button onClick={()=>anyadirTarea(document.getElementById('nuevaTarea').value)}>añadir tarea</button>
+      <button class="btn" onClick={()=>anyadirTarea(document.getElementById('nuevaTarea').value)}>Añadir Tarea</button>
       {
         tareas.map(tarea=>
           <div className="tarea">
-
-            <li key={tarea}>{tarea}</li>
-            <p onClick={()=>eliminarTarea(tarea)}>eliminar</p>
-            <p onClick={()=>modificartarea(tarea)}>Modificar</p>
+            <p> -Tarea:<li key={tarea}>{tarea}</li>  </p>
+            <p onClick={()=>eliminarTarea(tarea)}>-Eliminar</p>
+            <p onClick={()=>modificartarea(tarea)}>-Modificar</p>
             </div>
         )
       }
